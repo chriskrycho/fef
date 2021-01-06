@@ -14,4 +14,5 @@ Router.map(function () {
     this.route('octane-local-copy');
   });
   this.route('modifier-example');
+  this.route('lifecycle-hooks-example');
 });
