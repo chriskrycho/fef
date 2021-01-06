@@ -13,4 +13,5 @@ Router.map(function () {
     this.route('octane-getter');
     this.route('octane-local-copy');
   });
+  this.route('modifier-example');
 });

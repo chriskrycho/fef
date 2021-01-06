@@ -1,0 +1,4 @@
+.modifier-example :focus {
+  border: 4px solid green;
+  outline: none;
+}

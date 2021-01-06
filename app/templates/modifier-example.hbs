@@ -1,0 +1,18 @@
+{{page-title "DOM & modifiers"}}
+<h2>DOM & modifiers examples</h2>
+
+<select {{on "input" (pick "target.value" this.selectOption)}}>
+  {{#each this.options as |opt|}}
+    <option value={{opt}} selected={{eq opt this.selected}}>{{opt}}</option>
+  {{/each}}
+</select>
+
+<div class='modifier-example'>
+  {{#if (eq this.selected 'classic')}}
+    <ModifierExample::Classic />
+  {{else if (eq this.selected 'Octane (bad)')}}
+    <ModifierExample::OctaneBad />
+  {{else if (eq this.selected 'Octane (good)')}}
+    <ModifierExample::OctaneGood />
+  {{/if}}
+</div>
