@@ -6,4 +6,11 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {});
+Router.map(function () {
+  this.route('args-example', function() {
+    this.route('classic');
+    this.route('octane-broken');
+    this.route('octane-getter');
+    this.route('octane-local-copy');
+  });
+});

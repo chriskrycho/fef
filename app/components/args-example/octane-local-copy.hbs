@@ -1,0 +1,15 @@
+<h2>Octane (with <code>@localCopy</code>)</h2>
+<p><code>\{{@value}}</code> is <code>{{print @value}}</code></p>
+<p><code>\{{this.value}}</code> is <code>{{print this.value}}</code></p>
+
+<form {{on "submit" this.persist}}>
+  <label>
+    Local value
+    <input
+      type='text'
+      value={{this.localValue}}
+      {{on "input" (pick "target.value" this.updateLocalValue)}}
+    >
+  </label>
+  <button type='submit'>persist</button>
+</form>
